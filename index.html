@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airavat Consulting Group & Technology Services</title>
+    <link rel="stylesheet" href="./css/pico.orange.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* .body-bg {
+            background: linear-gradient(136deg,
+                    white 0%,
+                    rgba(255, 255, 255, 1.0) 5%,
+                    rgb(255, 228, 182) 15%,
+                    rgb(255, 245, 186) 20%,
+                    rgb(248, 226, 188) 25%,
+                    rgb(255, 236, 202) 40%,
+                    rgb(255, 245, 186) 60%,
+                    rgb(248, 226, 188) 85%,
+                    white 100%);
+            z-index: -101;
+        } */
+
+
+
+        * {
+            font-family: "Inter", sans-serif !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+        }
+
+        .body-bg {
+            background: linear-gradient(151deg,
+                    rgb(190, 170, 244) 0%,
+                    rgb(252, 230, 199) 5%,
+                    rgb(255, 209, 189) 20%,
+                    rgb(247, 189, 151) 25%,
+                    rgb(255, 232, 200) 40%,
+                    rgb(255, 210, 193) 60%,
+                    rgb(208, 197, 255) 85%,
+                    rgb(227, 218, 254) 100%);
+        }
+
+        .rainbow-text {
+            /* background-image: linear-gradient(270deg, #ff8664 4.18%, #ff8664 5.3%, #ffd09b 46.79%, #f193e4 81.55%, #8ec6ff 116.31%); */
+            /* background-image: linear-gradient(176deg, 
+                            rgba(255, 0, 0, 0.6), 
+                            rgba(255, 127, 0, 0.6), 
+                            rgba(255, 255, 0, 0.6), 
+                            rgba(0, 255, 0, 0.6), 
+                            rgba(0, 0, 255, 0.6),
+                            rgba(75, 0, 130, 0.6), 
+                            rgba(148, 0, 211, 0.6)
+                        ); */
+            background-image: linear-gradient(270deg, #ff3200 0%, #ff3200 1%, #ffb400 38%, #da33d0 69%, #006fd9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fw-100 {
+            font-weight: 100;
+        }
+
+        .fw-200 {
+            font-weight: 200;
+        }
+
+        .fw-300 {
+            font-weight: 300;
+        }
+
+        .fw-400 {
+            font-weight: 400;
+        }
+
+
+        .fl {
+            float: left;
+            display: inline
+        }
+
+        .fr {
+            float: right;
+            display: inline
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .body-bg {
+                background: linear-gradient(151deg,
+                        rgb(14, 0, 52) 0%,
+                        rgb(40, 12, 0) 20%,
+                        rgb(105, 42, 0) 25%,
+                        rgb(48, 28, 0) 40%,
+                        rgb(102, 59, 0) 60%,
+                        rgb(104, 61, 0) 85%,
+                        rgb(14, 0, 52) 100%);
+            }
+        }
+    </style>
+</head>
+
+
+<body class="body-bg">
+    <style>
+        /* NAV */
+        .navbar {
+            /* position: absolute; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* padding: 1.5rem; */
+            z-index: 99;
+            /* margin-top: 1rem; */
+        }
+
+        .navbar .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar .brand-logo {
+            z-index: 100;
+        }
+
+        .navbar .nav-links {
+            background: url('./images/menu-bg.png') repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            z-index: 100;
+        }
+
+
+        .navbar .nav-link {
+            color: transparent;
+        }
+
+        .navbar a:hover {
+            color: rgba(255, 255, 100, 0.3);
+            /* border-bottom: 1px solid goldenrod; */
+        }
+
+        /* NAV */
+    </style>
+
+    <nav class="navbar" style="background-color:#090a0fef;">
+        <div class="brand-logo "> <a href="#"></a>
+                <img src="./images/airavat6.png" width="100" alt="Airavat Consulting Group & Technology Services">
+        </div>
+        <ul class="nav-links ">
+            <li><a href="#section2" class="nav-link">Services</a></li>
+            <li><a href="#section3" class="nav-link">Contact</a></li>
+            <li><a href="#section4" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+    <!-- <nav>
+        <ul>
+            <li><strong>Airavat</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav> -->
+    <!-- SLIDES -->
+    <!-- width="100%" min-height="90%"
+        style="height:90vh; background:radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);" -->
+    <div>
+        <!-- <canvas id="canvas" style="width: 100%;min-height:100%; z-index: -10;"></canvas> -->
+        <style>
+            /* SLIDES */
+            .scroll-horizontal {
+                overflow: hidden;
+                padding: 2rem;
+                /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+                background-image: url('./images/top_bg.jpg');
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+
+            .scroll-horizontal .hero-slide {
+                display: none;
+                min-height: 40vh;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                text-align: center;
+            }
+
+            .scroll-horizontal .hero-slide h1 {
+                /* background: -webkit-linear-gradient(white, #38495a); */
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(0deg, rgb(56, 73, 90, 0.8) 0%, rgb(255, 255, 255, 0.8) 50%, rgb(255, 255, 255, 0.95) 100%);
+                text-align: center;
+                text-shadow: 1px 1px 2px rgba(100, 100, 100, 0.5);
+                transition: all 1s ease-in-out;
+            }
+
+
+            .scroll-horizontal .slide-h1 {
+                padding: auto;
+                font-weight: 200;
+                color: aliceblue !important;
+                font-size: 3.5rem;
+                transition: all 1s ease-in-out;
+
+            }
+
+            .scroll-horizontal .slide-p1 {
+                font-style: italic;
+                font-weight: 300;
+                /* color: rgb(255, 209, 172) !important; */
+                padding-bottom: 1rem;
+                background-image: linear-gradient(90deg, #ff2a00 15%, #ff2a00 20%, #ffe600 55%, #7048ff 65%, #ff00d0 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 1s ease-in-out;
+            }
+
+            .scroll-horizontal .slide-p2 {
+                padding-top: 1rem;
+                padding: 4rem;
+                font-weight: 300;
+                color: rgb(182, 221, 255) !important;
+                background: radial-gradient(ellipse at bottom, #1b2735c9 0%, #090a0fc9 100%);
+                transition: all 1s ease-in-out;
+            }
+
+            .scroll-horizontal .dot-container {
+                display: flex;
+                float: right;
+            }
+
+            .scroll-horizontal .dot {
+                width: 1rem;
+                height: 1rem;
+                background-color: #953900a1;
+                transform: rotate(135deg);
+                cursor: pointer;
+                transition: all 1s ease-in;
+            }
+
+            .scroll-horizontal .active-dot {
+                /* background-color: #d1d1d1d3; */
+                border: 10px solid darkgoldenrod;
+                transform: translateY(-20px);
+                transition: all 1s ease-in-out;
+            }
+        </style>
+        <div class="scroll-horizontal">
+            <div class="hero-slide">
+                <h1 class="slide-h1">AI and Machine Learning</h1>
+                <h3 class="slide-p1"> Drive mark Intelligent Automation
+                    and Transformative Innovation </h3>
+                <hr>
+                <h3 class="slide-p2">Embrace the future of technology with our AI and machine learning
+                    solutions. Harness the power of
+                    advanced algorithms and data-driven intelligence to optimize operations, unlock new
+                    opportunities, and stay ahead of the curve.</h3>
+                <!-- <button>OUR MISSION IS TO PROVIDE BEST SERVICE</button> -->
+            </div>
+            <div class="hero-slide">
+                <h1 class="slide-h1">Cloud Consulting</h1>
+                <h3 class="slide-p1">Unlock Your Business Potential
+                    with Cloud Solutions</h3>
+                <hr>
+                <h3 class="slide-p2">Seamlessly migrate to the cloud and experience enhanced collaboration,
+                    flexibility, and scalability. Elevate your business to new heights with our expert cloud
+                    consulting services.
+                </h3>
+
+            </div>
+            <div class="hero-slide">
+                <h1 class="slide-h1">Enterprise Application Services</h1>
+                <h3 class="slide-p1">Maximize the Value of Your
+                    Business Applications</h3>
+                <hr>
+                <h3 class="slide-p2">Leverage our end-to-end services for advisory, implementation,
+                    migration, and upgrade of enterprise applications. Whether it's Oracle, SAP, Salesforce, or
+                    others, we ensure seamless transitions and ongoing support for your critical systems.</h3>
+
+            </div>
+
+            <div class="hero-slide">
+                <h1 class="slide-h1">Software Consulting</h1>
+                <h3 class="slide-p1">Elevate Your Technology
+                    Landscape for Growth</h3>
+                <hr>
+                <h3 class="slide-p2">Transform your business with our strategic software consulting
+                    services. From IT strategy and governance to application management and support, we offer
+                    innovative solutions that drive efficiency, agility, and growth.
+                </h3>
+
+            </div>
+
+            <div class="hero-slide">
+                <h1 class="slide-h1">Talent Mobilization</h1>
+                <h3 class="slide-p1">Empower Your Organization with
+                    Top-tier Talent</h3>
+                <hr>
+                <h3 class="slide-p2">Drive growth and success with the right people in the right roles. Our
+                    talent mobilization services connect you with exceptional individuals who will propel
+                    innovation, productivity, and achievement within your organization.</h3>
+            </div>
+            <!-- <button>OUR MISSION IS TO PROVIDE BEST SERVICE</button> -->
+
+            <div class="dot-container"></div>
+
+
+        </div>
+        <script src="./js/hero-slider.js"></script>
+    </div>
+    <!-- SLIDES END -->
+    <div class="container-fluid">
+
+        <main>
+
+            <article id="section1">
+                <header>
+                    <h4 class="rainbow-text fw-400">Business Process Design and Re-Engineering</h4>
+                </header>
+                <section>
+                    <div class="grid">
+                        <img src="./images/workflow-sm.jpg" alt="business process" width="500px">
+                        <div style="vertical-align: middle;">
+                            <p>
+                                Revolutionize your business processes with our design and re-engineering expertise. We
+                                analyze, optimize, and innovate your workflows to enhance efficiency, reduce costs, and
+                                deliver a superior customer experience. Empower your organization with agile,
+                                streamlined processes that drive competitiveness and growth, ensuring that you stay
+                                ahead of the curve in today's dynamic business landscape.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <h6 class="">Revolutionize Your Workflows for Enhanced Efficiency</h6>
+                </footer>
+            </article>
+
+
+            <article id="section2">
+                <header>
+                    <h4 class="rainbow-text fw-400">Advisory, Implementation, Migration, and Upgrade of Business
+                        Enterprise Applications</h4>
+                </header>
+                <section>
+                    <div class="grid">
+                        <div>
+                            <p>
+                                Leverage our end-to-end services for advisory, implementation, migration, and upgrade of
+                                enterprise applications. Whether it's Oracle Cloud ERP, CX, SAP, or Salesforce, we
+                                ensure a seamless transition and ongoing support for your critical systems. Trust our
+                                experts to guide you through the complexities of enterprise application management,
+                                maximizing the value of your business applications.
+                            </p>
+                        </div>
+                        <img src="./images/saas-sm.jpg" alt="saas" width="500px" style=" justify-self: end;">
+                    </div>
+                </section>
+                <footer>
+                    <h6>
+                        Leverage the Full Potential of Your Business Applications
+
+                    </h6>
+                </footer>
+            </article>
+
+
+
+            <article id="section3">
+                <header>
+                    <h4 class="rainbow-text fw-400">Program Management and Governance</h4>
+                </header>
+                <section>
+                    <div class="grid">
+                        <img src="./images/plan-sm.jpg" alt="plan" width="500px">
+                        <div>
+
+
+                            <p>
+                                Trust our robust program management and governance solutions to drive successful
+                                outcomes for your initiatives. We ensure that your projects are executed with precision,
+                                transparency, and accountability, leading to impactful results. With our expertise, you
+                                can streamline initiatives, mitigate risks, and achieve operational excellence, so you
+                                can focus on driving value for your business.
+
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+                <footer>
+                    <h6>Drive Successful Program Outcomes with Precision and Transparency</h6>
+                </footer>
+            </article>
+
+
+            <article id="section4">
+                <header>
+                    <h4 class="rainbow-text fw-400">Managed IT Services</h4>
+                </header>
+                <section>
+                    <div class="grid">
+                        <div>
+                            <p>Keep your business running smoothly with our comprehensive managed IT services. From
+                                proactive
+                                maintenance to 24/7 support, we ensure that your technology infrastructure is optimized,
+                                secure,
+                                and ready to support your business objectives. With our dedicated team of experts
+                                handling your
+                                IT needs, you can focus on driving growth and achieving your business goals.</p>
+                        </div>
+                        <img src="./images/it-serv-sm.jpg" alt="saas" width="500px" style=" justify-self: end;">
+                    </div>
+                </section>
+                <footer>
+                    <h6>Experience Peace of Mind with Reliable IT Solutions</h6>
+                </footer>
+            </article>
+
+            <article id="section4">
+                <header>
+                    <h4 class="rainbow-text fw-400">Other Services</h4>
+                </header>
+                <section>
+                    <ul>
+                        <li>Quality Assurance and automation- Ensure Flawless Performance with Rigorous Testing</li>
+                        <li>Training - Empower Your Team with Specialized Training</li>
+                        <li>IT Strategy and Planning - Unlock the Potential of Your IT Infrastructure</li>
+                    </ul>
+                </section>
+            </article>
+
+
+            <!-- <article id="section3">
+                <header>
+                    <h4 class="rainbow-text fw-400">Quality Assurance</h4><hr>
+                    <h6>Ensure Flawless Performance with Rigorous Testing</h6>
+                </header>
+                <section>
+                    <p>
+                        Trust our comprehensive quality assurance services to ensure the highest standard of quality for your software solutions. From rigorous testing and validation to compliance and user acceptance, we guarantee that your applications perform flawlessly and meet user expectations. With our expertise, you can deliver reliable, high-performance software solutions that drive customer satisfaction and business success.</p>
+                </section>
+            </article> -->
+
+            <!-- <article id="section4">
+                <header>
+                    <h4 class="rainbow-text fw-400">Training</h4><hr>
+                    <h6>Empower Your Team with Specialized Training</h6>
+                </header>
+                <section>
+                    <p>
+                  Invest in the continuous development of your employees with our dynamic training solutions. Our tailored programs cover a wide range of technologies and best practices, ensuring that your workforce remains at the forefront of industry trends. From technical skills to process optimization, we provide the knowledge and tools for your team to excel and drive innovation within your organization.    
+                        
+                    </p>
+                </section>
+            </article> -->
+
+
+            <!-- <article id="section5">
+                <header>
+                    <h4 class="rainbow-text fw-400">IT Strategy and Planning</h4><hr>
+                    <h6>Unlock the Potential of Your IT Infrastructure</h6>
+                </header>
+                <section>
+                    <p>
+                        Embrace the power of strategic IT planning with our expert guidance. Our team specializes in crafting tailored IT strategies that align with your business objectives, ensuring that technology becomes a valuable enabler of success. From infrastructure optimization to digital transformation, let us help you leverage technology to drive innovation, productivity, and sustainable growth.                        
+                    </p>
+                </section>
+            </article>             -->
+
+
+        </main>
+    </div>
+    <article>
+        <div class="grid">
+            
+            <div class="grid">
+                <div>Offices</div>
+                <div>240 N Bayshore Blvd, <br> San Mateo, <br> California <br> Contact: 650-770-9488</div>
+
+                <div>Bhopal Address</div>
+            </div>
+        </div>
+        <footer>&copy; Copyright 2024 <img src="./images/airavat6.png" width="100" alt="Airavat Consulting Group & Technology Services" style="margin-top:-10px;"> Airavat Consulting Group & Technology Services</footer>
+    </article>
+</body>
+
+
+</html>
