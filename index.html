@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airavat Consulting Group & Technology Services</title>
     <!-- <link rel="stylesheet" href="./css/pico.orange.min.css" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" rel="preload"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css">
+    </noscript>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
@@ -161,20 +165,12 @@
             <!-- <li><a href="#section4" class="nav-link">About</a></li> -->
         </ul>
     </nav>
-    <!-- <nav>
-        <ul>
-            <li><strong>Airavat</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-        </ul>
-    </nav> -->
-    <!-- SLIDES -->
+
+
+    <!-- SLIDES START -->
     <!-- width="100%" min-height="90%"
         style="height:90vh; background:radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);" -->
-    <div>
+    <div width="100%" min-height="40vh">
         <!-- <canvas id="canvas" style="width: 100%;min-height:100%; z-index: -10;"></canvas> -->
         <style>
             /* SLIDES */
@@ -322,11 +318,67 @@
 
 
         </div>
-        <script src="./js/hero-slider.js"></script>
-    </div>
-    <!-- SLIDES END -->
-    <div class="container-fluid">
+        <!-- <script src="./js/hero-slider.js" ></script> -->
+        <script defer async>
+            document.addEventListener("DOMContentLoaded", function () {
+                var slides = document.querySelectorAll('.hero-slide');
+                var dotsContainer = document.querySelector('.dot-container');
+                var currentSlide = 0;
 
+                function showSlide(index) {
+                    slides[currentSlide].style.opacity = 0;
+                    slides[currentSlide].style.display = 'none';
+                    slides[index].style.display = 'block';
+                    setTimeout(() => {
+                        slides[index].style.opacity = 1;
+                    }, 10);
+                    currentSlide = index;
+                }
+
+                function nextSlide() {
+                    var nextIndex = (currentSlide + 1) % slides.length;
+                    showSlide(nextIndex);
+                    updateDots(nextIndex);
+                }
+
+                function updateDots(index) {
+                    dots.forEach(dot => dot.classList.remove('active-dot'));
+                    dots[index].classList.add('active-dot');
+                }
+
+                // Create dots
+                var dots = [];
+                for (var i = 0; i < slides.length; i++) {
+                    var dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    dot.addEventListener('click', function (i) {
+                        return function () {
+                            showSlide(i);
+                            updateDots(i);
+                            clearInterval(intervalId);
+                        };
+                    }(i));
+                    dotsContainer.appendChild(dot);
+                    dots.push(dot);
+                }
+
+                // Initial setup
+                showSlide(0);
+                dots[0].classList.add('active-dot');
+
+                // Set interval to change slides
+                var intervalId = setInterval(nextSlide, 7000); // Change slide every 3000 milliseconds (3 seconds)
+
+                // Stop interval on last slide
+                // slides[slides.length - 1].addEventListener('transitionend', function () {
+                //   clearInterval(intervalId);
+                // });
+            });
+        </script>
+    </div>
+    <!-- SLIDES END  -->
+    <div class=""> 
+<!-- container-fluid -->
         <main>
 
             <article id="section1">
