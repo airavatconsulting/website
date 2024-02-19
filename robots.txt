@@ -1,0 +1,17 @@
+User-agent: *
+Crawl-delay: 10
+Disallow:
+
+User-agent: *
+Sitemap: https://airavatconsulting.github.io/website/sitemap.xml
+
+#        _
+#       [ ]
+#      (   )
+#       |>|
+#    __/===\__
+#   //| o=o |\\
+# <]  | o=o |  [>
+#     \=====/
+#    / / | \ \
+#   <_________>

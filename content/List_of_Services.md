@@ -1,0 +1,19 @@
+-   Software Development Consulting 
+-   AI and Machine Learning
+-   Cloud Services 
+-   Cyber Security
+-   Talent Mobilization
+-   Advisory, Implementation, Migration, and Upgrade of Business Enterprise Applications and Enterprise Application Services
+-   ERP Projects
+-   Quality Assurance
+-   Training
+-   Software Design and Architecture
+-   Data Science, Data Warehousing, Data Management, Data Mesh, and Data Lake
+-   Business Intelligence
+-   Business Analytics
+-   Mobile Applications Development
+-   Web Application Development 
+-   Managed IT Services
+-   IT Strategy and Planning
+-   Program Management and Governance
+-   Business Process Design and Re-Engineering
