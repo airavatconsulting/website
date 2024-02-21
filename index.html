@@ -14,6 +14,15 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBV8Z56FZX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TBV8Z56FZX');
+    </script>
     <style>
         /* .body-bg {
             background: linear-gradient(136deg,
@@ -32,7 +41,7 @@
 
 
         * {
-            font-family: "Inter", sans-serif !important;
+            /* font-family: "Inter", sans-serif !important; */
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
         }
@@ -60,10 +69,29 @@
                             rgba(75, 0, 130, 0.6), 
                             rgba(148, 0, 211, 0.6)
                         ); */
-            background-image: linear-gradient(270deg, #ff3200 0%, #ff3200 1%, #ffb400 38%, #da33d0 69%, #006fd9 100%);
+            background-image: linear-gradient(165deg, #ff3200 0%, #ff3200 1%, #ffb400 38%, #da33d0 69%, #46a6ff 100%);
+             /* background-image: linear-gradient(270deg, #ffae9a 0%, #ffa993 1%, #ffde92 38%, #febffa 69%, #d3c4ff 100%); */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .rainbow-text-2{
+            background-image: linear-gradient(300deg, #ff6344 10%, #ff7e64 20%, #fff16e 55%, #61ffff 75%, #dd48ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 1s ease-in-out;
+        }
+
+        .moon-text{
+            -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(0deg, rgb(56, 73, 90, 1) 0%, rgb(255, 255, 255, 1) 100%);
+                text-align: center;
+                /* text-shadow: 1px 1px 2px rgba(134, 134, 134, 0.5); */
+                transition: all 1s ease-in-out;
         }
 
         .fw-100 {
@@ -119,22 +147,20 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            /* padding: 1.5rem; */
             z-index: 99;
-            /* margin-top: 1rem; */
         }
 
-        .navbar .sticky-nav {
+        .navbar .sticky-navbar {
             position: fixed;
             top: 0;
             width: 100%;
         }
 
-        .navbar .brand-logo {
+        .navbar .navbar-brand-logo {
             z-index: 100;
         }
 
-        .navbar .nav-links {
+        .navbar .navbar-links {
             background: url('./images/menu-bg.webp') repeat;
             -webkit-background-clip: text;
             background-clip: text;
@@ -143,12 +169,12 @@
         }
 
 
-        .navbar .nav-link {
+        .navbar .navbar-link {
             color: transparent;
         }
 
         .navbar a:hover {
-            color: rgba(255, 255, 100, 0.3);
+            color: rgba(255, 255, 0, 0.4);
             /* border-bottom: 1px solid goldenrod; */
         }
 
@@ -159,10 +185,10 @@
         <div class="brand-logo "> <a href="#"></a>
             <img src="./images/companylogo.webp" width="100" alt="Airavat Consulting Group & Technology Services">
         </div>
-        <ul class="nav-links ">
-            <li><a href="#section1" class="nav-link">Services</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            <!-- <li><a href="#section4" class="nav-link">About</a></li> -->
+        <ul class="navbar-links ">
+            <li><a href="#section1" class="navbar-link">Services</a></li>
+            <li><a href="#contact" class="navbar-link">Contact</a></li>
+            <!-- <li><a href="#section4" class="navbar-link">About</a></li> -->
         </ul>
     </nav>
 
@@ -179,6 +205,7 @@
                 padding: 2rem;
                 /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
                 background-image: url('./images/top_bg.webp');
+                background-size: cover;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -188,7 +215,7 @@
 
             .scroll-horizontal .hero-slide {
                 display: none;
-                min-height: 40vh;
+                min-height: 33vh;
                 opacity: 0;
                 transition: opacity 1s ease-in-out;
                 text-align: center;
@@ -196,13 +223,7 @@
 
             .scroll-horizontal .hero-slide h1 {
                 /* background: -webkit-linear-gradient(white, #38495a); */
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-image: linear-gradient(0deg, rgb(56, 73, 90, 0.8) 0%, rgb(255, 255, 255, 0.8) 50%, rgb(255, 255, 255, 0.95) 100%);
-                text-align: center;
-                text-shadow: 1px 1px 2px rgba(100, 100, 100, 0.5);
-                transition: all 1s ease-in-out;
+                font-weight: 400;
             }
 
 
@@ -210,26 +231,22 @@
                 padding: auto;
                 font-weight: 200;
                 color: aliceblue !important;
-                font-size: 3.5rem;
+                font-size: 2.5rem;
                 transition: all 1s ease-in-out;
 
             }
 
             .scroll-horizontal .slide-p1 {
-                font-style: italic;
-                font-weight: 300;
+                /* font-style: italic; */
+                font-weight: 400;
                 /* color: rgb(255, 209, 172) !important; */
-                padding-bottom: 1rem;
-                background-image: linear-gradient(90deg, #ff2a00 15%, #ff2a00 20%, #ffe600 55%, #7048ff 65%, #ff00d0 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: all 1s ease-in-out;
+                /* padding-bottom: 1rem; */
+                /* background-image: linear-gradient(90deg, #ff2a00 15%, #ff2a00 20%, #ffe600 55%, #7048ff 65%, #ff00d0 100%); */
             }
 
             .scroll-horizontal .slide-p2 {
-                padding-top: 1rem;
-                padding: 4rem;
+                /* padding-top: 1rem; */
+                padding: 1rem 8rem;
                 font-weight: 300;
                 color: rgb(182, 221, 255) !important;
                 background: radial-gradient(ellipse at bottom, #1b2735c9 0%, #090a0fc9 100%);
@@ -256,37 +273,46 @@
                 transform: translateY(-20px);
                 transition: all 1s ease-in-out;
             }
+
+            @media (max-width:1024px) {
+                .scroll-horizontal{
+                    padding: 0.5rem;
+                }
+                .scroll-horizontal .slide-p2 {
+                padding: 0.5rem;
+            }
+        }
         </style>
         <div class="scroll-horizontal">
             <div class="hero-slide">
-                <h1 class="slide-h1">AI & Machine Learning</h1>
-                <h3 class="slide-p1"> Drive  Intelligent Automation and Transformative Innovation </h3>
-                <hr>
+                <h1 class="slide-h1"><span class="moon-text">   AI & Machine Learning</span></h1>
+                <h3 class="slide-p1"> <span class="rainbow-text-2">Drive  Intelligent Automation and Transformative Innovation </span></h3>
+
                 <h3 class="slide-p2">Drive innovation and gain invaluable insights by integrating AI/ML into your operations. We leverage cutting-edge technology to develop and implement customized solutions that unlock the power of your data.
                 </h3>
             </div>
 
             <div class="hero-slide">
-                <h1 class="slide-h1">Hybrid Cloud Solutions</h1>
-                <h3 class="slide-p1"> Scale with Agility & Cost-Efficiency</h3>
-                <hr>
+                <h1 class="slide-h1"> <span class="moon-text">    Hybrid Cloud Solutions </span></h1>
+                <h3 class="slide-p1"> <span class="rainbow-text-2">Scale with Agility & Cost-Efficiency</span></h3>
+
                 <h3 class="slide-p2">
                     Seamlessly migrate to the cloud and unlock scalability, agility, and cost-efficiency. Our experts guide you through every step, ensuring a smooth transition and maximizing your cloud experience.
                 </h3>
             </div>
 
             <div class="hero-slide">
-                <h1 class="slide-h1">Cybersecurity</h1>
-                <h3 class="slide-p1">Fortify Your Defense & Safeguard Your Future</h3>
-                <hr>
+                <h1 class="slide-h1"><span class="moon-text">   Cybersecurity</span></h1>
+                <h3 class="slide-p1"><span class="rainbow-text-2">Fortify Your Defense & Safeguard Your Future</span></h3>
+
                 <h3 class="slide-p2">Protect your valuable data and infrastructure from ever-evolving threats. We provide comprehensive security solutions, vulnerability assessments, and incident response strategies that keep you one step ahead.
                 </h3>
 
             </div>
             <div class="hero-slide">
-                <h1 class="slide-h1">Data Science & Analytics</h1>
-                <h3 class="slide-p1"> Unleash Data-Driven Insights & Fuel Smart Decisions</h3>
-                <hr>
+                <h1 class="slide-h1"> <span class="moon-text">   Data Science & Analytics</span></h1>
+                <h3 class="slide-p1"> <span class="rainbow-text-2">Unleash Data-Driven Insights & Fuel Smart Decisions</span></h3>
+
                 <h3 class="slide-p2">Make data-driven decisions with confidence. Our skilled data scientists and analysts help you transform your data into actionable insights, empowering you to optimize operations, boost customer engagement, and achieve your strategic goals.
                 </h3>
 
@@ -294,27 +320,27 @@
 
             <div class="hero-slide">
                 <h1 class="slide-h1"></h1>
-                <h1 class="slide-h1">Software Design and Development</h1>
-                <h3 class="slide-p1">Build High-Performing Applications with Modern Expertise</h3>
-                <hr>
+                <h1 class="slide-h1"><span class="moon-text">    Software Design and Development</span></h1>
+                <h3 class="slide-p1"><span class="rainbow-text-2">Build High-Performing Applications with Modern Expertise</span></h3>
+
                 <h3 class="slide-p2">Build high-performing applications with the expertise you need. Our development consultants guide you through modern methodologies, cloud-native development, and microservices architecture, ensuring your software is future-proof and delivers exceptional value.
                 </h3>
 
             </div>
 
             <div class="hero-slide">
-                <h1 class="slide-h1">Talent Mobilization</h1>
-                <h3 class="slide-p1">Empower Your Organization with Top-tier Talent</h3>
-                <hr>
+                <h1 class="slide-h1"><span class="moon-text">   Talent Mobilization</span></h1>
+                <h3 class="slide-p1"><span class="rainbow-text-2">Empower Your Organization with Top-tier Talent</span></h3>
+
                 <h3 class="slide-p2">Drive growth and success with the right people in the right roles. Our
                     talent mobilization services connect you with exceptional individuals who will propel
                     innovation, productivity, and achievement within your organization.</h3>
             </div>
 
             <div class="hero-slide">
-                <h1 class="slide-h1">Mobile and Web Applications Development</h1>
-                <h3 class="slide-p1">Engage Users, Amplify Brand Reach, Transform Your Online Presence & Drive Business Growth</h3>
-                <hr>
+                <h1 class="slide-h1"><span class="moon-text">   Mobile and Web Applications Development</span></h1>
+                <h3 class="slide-p1"><span class="rainbow-text-2">Engage Users, Amplify Brand Reach, Transform Your Online Presence & Drive Business Growth</span></h3>
+
                 <h3 class="slide-p2">Elevate your user experience and expand your reach with captivating mobile applications. Build captivating and dynamic web applications that empower your business and engage your audience. Our skilled developers leverage cutting-edge technologies to create secure, scalable, and user-friendly software experiences that drive conversions, enhance brand loyalty, and fuel your online success.
                 </h3>
             </div>
@@ -325,60 +351,7 @@
         </div>
         <!-- <script src="./js/hero-slider.js" ></script> -->
         <script defer async>
-            document.addEventListener("DOMContentLoaded", function () {
-                var slides = document.querySelectorAll('.hero-slide');
-                var dotsContainer = document.querySelector('.dot-container');
-                var currentSlide = 0;
-
-                function showSlide(index) {
-                    slides[currentSlide].style.opacity = 0;
-                    slides[currentSlide].style.display = 'none';
-                    slides[index].style.display = 'block';
-                    setTimeout(() => {
-                        slides[index].style.opacity = 1;
-                    }, 10);
-                    currentSlide = index;
-                }
-
-                function nextSlide() {
-                    var nextIndex = (currentSlide + 1) % slides.length;
-                    showSlide(nextIndex);
-                    updateDots(nextIndex);
-                }
-
-                function updateDots(index) {
-                    dots.forEach(dot => dot.classList.remove('active-dot'));
-                    dots[index].classList.add('active-dot');
-                }
-
-                // Create dots
-                var dots = [];
-                for (var i = 0; i < slides.length; i++) {
-                    var dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    dot.addEventListener('click', function (i) {
-                        return function () {
-                            showSlide(i);
-                            updateDots(i);
-                            clearInterval(intervalId);
-                        };
-                    }(i));
-                    dotsContainer.appendChild(dot);
-                    dots.push(dot);
-                }
-
-                // Initial setup
-                showSlide(0);
-                dots[0].classList.add('active-dot');
-
-                // Set interval to change slides
-                var intervalId = setInterval(nextSlide, 7000); // Change slide every 3000 milliseconds (3 seconds)
-
-                // Stop interval on last slide
-                // slides[slides.length - 1].addEventListener('transitionend', function () {
-                //   clearInterval(intervalId);
-                // });
-            });
+            document.addEventListener("DOMContentLoaded",function(){var t=document.querySelectorAll(".hero-slide"),e=document.querySelector(".dot-container"),n=0;function a(e){t[n].style.opacity=0,t[n].style.display="none",t[e].style.display="block",setTimeout(()=>{t[e].style.opacity=1},10),n=e}function o(t){c.forEach(t=>t.classList.remove("active-dot")),c[t].classList.add("active-dot")}for(var c=[],d=0;d<t.length;d++){var i=document.createElement("div");i.classList.add("dot"),i.addEventListener("click",function(t){return function(){a(t),o(t),clearInterval(l)}}(d)),e.appendChild(i),c.push(i)}a(0),c[0].classList.add("active-dot");var l=setInterval(function(){var e=(n+1)%t.length;a(e),o(e)},7e3)});
         </script>
     </div>
     <!-- SLIDES END  -->
@@ -388,7 +361,7 @@
 
             <article id="section1">
                 <header>
-                    <h4 class="rainbow-text fw-400">Enterprise Application Services</h4>
+                    <h4 ><span class="rainbow-text fw-400">Enterprise Application Services</span></h4>
                 </header>
                 <section>
                     <div class="grid">
@@ -413,7 +386,7 @@
 
             <article id="section2">
                 <header>
-                    <h4 class="rainbow-text fw-400">Managed IT Services</h4>
+                    <h4 class=""><span class="rainbow-text fw-400">Managed IT Services</span></h4>
                 </header>
                 <section>
                     <div class="grid">
@@ -437,7 +410,7 @@
 
             <article id="section3">
                 <header>
-                    <h4 class="rainbow-text fw-400">IT Strategy & Planning</h4>
+                    <h4><span class="rainbow-text fw-400">IT Strategy & Planning</span></h4>
                 </header>
                 <section>
                     <div class="grid">
@@ -481,7 +454,7 @@
 
             <article id="section4">
                 <header>
-                    <h4 class="rainbow-text fw-400">Other Services</h4>
+                    <h4><span class="rainbow-text fw-400">Other Services</span></h4> 
                 </header>
                 <section>
                     <ul>
@@ -495,7 +468,7 @@
 
             <article id="section7">
                 <header>
-                    <h4 class="rainbow-text fw-400">Why Choose Us?</h4>
+                    <h4><span class="rainbow-text fw-400">Why Choose Us?</span></h4>
                 </header>
                 <section>
                     <ul>
@@ -507,7 +480,7 @@
                         <li><strong>Focus on security:       </strong> We prioritize data security and ensure compliance with industry standards.</li>
                         <li><strong>24/7 support:            </strong> We're always available to address your needs and concerns.</li>
                     </ul>
-                    <h5 class="rainbow-text fw-400">Ready to Experience the Difference?</h5>
+                    <h5><span class="rainbow-text fw-400">Ready to Experience the Difference?</span></h5>
                         <p>Contact us today for a free consultation and discover how our high-impact services can unlock your full potential. Together, we can help you navigate the ever-changing technological landscape and achieve remarkable results.
                         </p>
                         </section>
@@ -564,8 +537,8 @@
                 <!-- <div>Bhopal Address</div> -->
             </div>
         </div>
-        <footer>&copy; Copyright 2024 <img src="./images/companylogo.webp" width="100"
-                alt="Airavat Consulting Group & Technology Services" style="margin-top:-10px;"> Airavat Consulting Group
+        <footer>&copy; Copyright 2024 <div style="display: inline-flex; background-size: cover; background-color: black; padding:0.2rem"><img src="./images/companylogo.webp" width="100"
+                alt="Airavat Consulting Group & Technology Services" style=""> </div> Airavat Consulting Group
             & Technology Services</footer>
     </article>
 </body>
