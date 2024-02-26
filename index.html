@@ -67,19 +67,31 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css">
+        <link rel="stylesheet" href="./css/airavat.css"/>
     </noscript>
+    <link rel="stylesheet" href="./css/airavat.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/top_bg.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/companylogo.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/menu-bg.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="./images/saas-sm.webp" type="image/webp">
+    <!-- <link rel="preload" fetchpriority="high" as="image" href="./images/plan-sm.webp" type="image/webp"> -->
+    <!-- <link rel="preload" fetchpriority="high" as="image" href="./images/workflow-sm.webp" type="image/webp"> -->
 
 </head>
 
 
 <body class="body-bg">
 
+    <!-- <div class="preload" style="display: none; width:0px; height: 0px;">
+        <img src="./images/top_bg.webp" alt="">
+    </div> -->
+
     <nav class="navbar" >
-        <div class="brand-logo "> <a href="./index.html">
-            <img src="./images/companylogo.webp" width="100" alt="Airavat Consulting Group & Technology Services"></a>
+        <div class="brand-logo " tabindex="-1"> <a href="./index.html" tabindex="-1">
+            <img src="./images/companylogo.webp" tabindex="-1" width="100" alt="Airavat Consulting Group & Technology Services"></a>
         </div>
-        <ul class="navbar-links ">
-            <li><a href="#section1" class="navbar-link">Services</a></li>
+        <ul class="navbar-links">
+            <li><a href="#section1" class="navbar-link" tabindex="1">Services</a></li>
             <li><a href="./about.html" class="navbar-link">About</a></li>
             <li><a href="#contact" class="navbar-link">Contact</a></li>
             <!-- <li><a href="#section4" class="navbar-link">About</a></li> -->
@@ -164,8 +176,10 @@
     <div class="container"> 
 <!-- container-fluid -->
         <main>
+            <div id="section1" style="margin-top: 4rem;">
+            </div>
 
-            <article id="section1">
+            <article id="section2" class="card-bg">
                 <header>
                     <h4 ><span class="rainbow-text fw-400">Enterprise Application Services</span></h4>
                 </header>
@@ -190,7 +204,7 @@
             </article>
 
 
-            <article id="section2">
+            <article id="section2" class="card-bg">
                 <header>
                     <h4 class=""><span class="rainbow-text fw-400">Managed IT Services</span></h4>
                 </header>
@@ -214,7 +228,7 @@
 
 
 
-            <article id="section3">
+            <article id="section3" class="card-bg">
                 <header>
                     <h4><span class="rainbow-text fw-400">IT Strategy & Planning</span></h4>
                 </header>
@@ -258,7 +272,7 @@
                 </footer>
             </article> -->
 
-            <article id="section4">
+            <article id="section4" class="card-bg">
                 <header>
                     <h4><span class="rainbow-text fw-400">Other Services</span></h4> 
                 </header>
@@ -272,7 +286,7 @@
                 </section>
             </article>
 
-            <article id="section7">
+            <article id="section7" class="card-bg">
                 <header>
                     <h4><span class="rainbow-text fw-400">Why Choose Us?</span></h4>
                 </header>
@@ -332,29 +346,28 @@
 
 
         </main>
-        <article id="contact">
+        <article id="contact" class="card-bg">
             <div class="grid">
         
                 <div class="grid">
                     <div> <strong> US Office : </strong> <br>
                         240 N Bayshore Blvd, <br> San Mateo, 94401 <br> California <br>
-                        <strong> US Contact: </strong> <br> 650-770-9488 </div>
+                        <strong> US Contact: </strong> <br> <a href="tel:+16507709488">+1 650 - 770 - 9488</a> </div>
                     <div>
                         <strong> India Office : </strong> <br>
                         HIG-2 Jawahar Chowk, <br> Saraswati Nagar, <br> Bhopal-462003 <br>
-                        <strong> India Contact: </strong> <br> +91 755-4046718 
+                        <strong> India Contact: </strong> <br> <a href="tel:+917554046718">+91 755 - 404 - 6718</a>
                     </div>
                 </div>
             </div>
             <footer>&copy; Copyright 2024 <div
-                    style="display: inline-flex; background-size: cover; background-color: black; padding:0.2rem"><img
+                    style="display: inline-flex; background-size: cover; background-color: rgba(9, 1, 35, 0.85); padding:0.4rem; border-radius: 1rem;"><img
                         src="./images/companylogo.webp" width="100" alt="Airavat Consulting Group & Technology Services"
                         style=""> </div> Airavat Consulting Group
                 & Technology Services</footer>
         </article>
     </div>
 
-    <link rel="stylesheet" href="./css/airavat.css">
     <!-- Google tag (gtag.js) -->
     <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-TBV8Z56FZX"></script>
     <script>

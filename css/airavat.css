@@ -21,15 +21,22 @@
         }
 
         .body-bg {
-            background: linear-gradient(151deg,
-                    rgb(190, 170, 244) 0%,
-                    rgb(252, 230, 199) 5%,
-                    rgb(255, 209, 189) 20%,
-                    rgb(247, 189, 151) 25%,
-                    rgb(255, 232, 200) 40%,
-                    rgb(255, 210, 193) 60%,
-                    rgb(208, 197, 255) 85%,
-                    rgb(227, 218, 254) 100%);
+            /* background-color: #ffead5; */
+            background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 0% 0% / 200px 200px, radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 100px 100px / 200px 200px, linear-gradient(rgba(255, 94, 0, 0.26) 2px, transparent 2px) 0px -1px / 100px 100px, linear-gradient(90deg, rgba(255, 94, 0, 0.26) 2px, rgba(255, 255, 255, 0.57) 2px) -1px 0px / 100px 100px rgba(255, 255, 255, 0.57);
+            background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+            background-color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        .card-bg {
+            backdrop-filter: blur(2px) saturate(150%);
+            -webkit-backdrop-filter: blur(2px) saturate(150%);
+            background-color: rgba(165, 165, 165, 0.1);
+
+            box-shadow:
+                4px 4px 8px 0 rgba(127, 127, 127, 0.5),
+                -4px -4px 8px 0 rgba(127, 127, 127, 0.5);
+            margin-top: 4rem;
         }
 
         .rainbow-text {
@@ -44,28 +51,28 @@
                             rgba(148, 0, 211, 0.6)
                         ); */
             background-image: linear-gradient(165deg, #ff3200 0%, #ff3200 1%, #ffb400 38%, #da33d0 69%, #46a6ff 100%);
-             /* background-image: linear-gradient(270deg, #ffae9a 0%, #ffa993 1%, #ffde92 38%, #febffa 69%, #d3c4ff 100%); */
+            /* background-image: linear-gradient(270deg, #ffae9a 0%, #ffa993 1%, #ffde92 38%, #febffa 69%, #d3c4ff 100%); */
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .rainbow-text-2{
+        .rainbow-text-2 {
             background-image: linear-gradient(300deg, #ff6344 10%, #ff7e64 20%, #fff16e 55%, #61ffff 75%, #dd48ff 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: all 1s ease-in-out;
+            /* transition: all 1s ease-in-out; */
         }
 
-        .moon-text{
+        .moon-text {
             -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-image: linear-gradient(0deg, rgb(56, 73, 90, 1) 0%, rgb(255, 255, 255, 1) 100%);
-                text-align: center;
-                /* text-shadow: 1px 1px 2px rgba(134, 134, 134, 0.5); */
-                transition: all 1s ease-in-out;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(0deg, rgb(56, 73, 90, 1) 0%, rgb(255, 255, 255, 1) 100%);
+            text-align: center;
+            /* text-shadow: 1px 1px 2px rgba(134, 134, 134, 0.5); */
+            /* transition: all 1s ease-in-out; */
         }
 
         .fw-100 {
@@ -97,15 +104,15 @@
 
         @media (prefers-color-scheme: dark) {
             .body-bg {
-                background: linear-gradient(151deg,
-                        rgb(14, 0, 52) 0%,
-                        rgb(40, 12, 0) 20%,
-                        rgb(105, 42, 0) 25%,
-                        rgb(48, 28, 0) 40%,
-                        rgb(102, 59, 0) 60%,
-                        rgb(104, 61, 0) 85%,
-                        rgb(14, 0, 52) 100%);
+                background: radial-gradient(circle, transparent 20%, #272626 20%, #272626 80%, transparent 80%, transparent) 0% 0% / 200px 200px, radial-gradient(circle, transparent 20%, #272626 20%, #272626 80%, transparent 80%, transparent) 100px 100px / 200px 200px, linear-gradient(rgba(255, 94, 0, 0.5) 1px, transparent 1px) 0px -0.5px / 100px 100px, linear-gradient(90deg, rgba(255, 94, 0, 0.36) 1px, #272626 1px) -0.5px 0px / 100px 100px #272626;
+                background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+                background-color: #222;
             }
+
+            .card-bg {
+                background: rgba(41, 41, 41, 0.1);
+            }
+
         }
 
         /* NAV */
@@ -155,90 +162,91 @@
             /* border-bottom: 1px solid goldenrod; */
         }
 
-        /* NAV */        
+        /* NAV */
 
-/* SLIDES */
-.scroll-horizontal {
-    overflow: hidden;
-    padding: 2rem;
-    padding-top: 4rem;
-    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
-    background-image: url('../images/top_bg.webp');
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 2rem;
-}
+        /* SLIDES */
+        .scroll-horizontal {
+            overflow: hidden;
+            padding: 2rem;
+            padding-top: 4rem;
+            /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+            background-image: url('../images/top_bg.webp');
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin-bottom: 2rem;
+        }
 
-.scroll-horizontal .hero-slide {
-    display: none;
-    min-height: 33vh;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    text-align: center;
-}
+        .scroll-horizontal .hero-slide {
+            display: none;
+            min-height: 33vh;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-align: center;
+        }
 
-.scroll-horizontal .hero-slide h1 {
-    /* background: -webkit-linear-gradient(white, #38495a); */
-    font-weight: 400;
-}
+        .scroll-horizontal .hero-slide h1 {
+            /* background: -webkit-linear-gradient(white, #38495a); */
+            font-weight: 400;
+        }
 
 
-.scroll-horizontal .slide-h1 {
-    padding: auto;
-    font-weight: 200;
-    color: aliceblue !important;
-    font-size: 2.5rem;
-    transition: all 1s ease-in-out;
+        .scroll-horizontal .slide-h1 {
+            padding: auto;
+            font-weight: 200;
+            color: aliceblue !important;
+            font-size: 2.5rem;
+            transition: opacity 1s ease-in-out;
 
-}
+        }
 
-.scroll-horizontal .slide-p1 {
-    /* font-style: italic; */
-    font-weight: 400;
-    /* color: rgb(255, 209, 172) !important; */
-    /* padding-bottom: 1rem; */
-    /* background-image: linear-gradient(90deg, #ff2a00 15%, #ff2a00 20%, #ffe600 55%, #7048ff 65%, #ff00d0 100%); */
-}
+        .scroll-horizontal .slide-p1 {
+            /* font-style: italic; */
+            font-weight: 400;
+            /* color: rgb(255, 209, 172) !important; */
+            /* padding-bottom: 1rem; */
+            /* background-image: linear-gradient(90deg, #ff2a00 15%, #ff2a00 20%, #ffe600 55%, #7048ff 65%, #ff00d0 100%); */
+        }
 
-.scroll-horizontal .slide-p2 {
-    /* padding-top: 1rem; */
-    padding: 1rem 8rem;
-    font-weight: 300;
-    color: rgb(182, 221, 255) !important;
-    background: radial-gradient(ellipse at bottom, #1b2735c9 0%, #090a0fc9 100%);
-    transition: all 1s ease-in-out;
-}
+        .scroll-horizontal .slide-p2 {
+            /* padding-top: 1rem; */
+            padding: 1rem 8rem;
+            font-weight: 300;
+            color: rgb(182, 221, 255) !important;
+            background: radial-gradient(ellipse at bottom, #1b2735c9 0%, #090a0fc9 100%);
+            transition: opacity 1s ease-in-out;
+        }
 
-.scroll-horizontal .dot-container {
-    display: flex;
-    float: right;
-}
+        .scroll-horizontal .dot-container {
+            display: flex;
+            float: right;
+        }
 
-.scroll-horizontal .dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: #953900a1;
-    transform: rotate(135deg);
-    cursor: pointer;
-    transition: all 1s ease-in;
-}
+        .scroll-horizontal .dot {
+            width: 1rem;
+            height: 1rem;
+            background-color: #953900a1;
+            transform: rotate(135deg);
+            cursor: pointer;
+            transition: all 1s ease-in;
+        }
 
-.scroll-horizontal .active-dot {
-    /* background-color: #d1d1d1d3; */
-    border: 10px solid darkgoldenrod;
-    transform: translateY(-20px);
-    transition: all 1s ease-in-out;
-}
+        .scroll-horizontal .active-dot {
+            /* background-color: #d1d1d1d3; */
+            border: 10px solid darkgoldenrod;
+            transform: translateY(-20px);
+            transition: all 1s ease-in-out;
+        }
 
-@media (max-width:1024px) {
-    .scroll-horizontal{
-        padding: 0.5rem;
-        padding-top: 4rem;
-    }
-    .scroll-horizontal .slide-p2 {
-    padding: 0.5rem;
-}
-}        
+        @media (max-width:1024px) {
+            .scroll-horizontal {
+                padding: 0.5rem;
+                padding-top: 4rem;
+            }
+
+            .scroll-horizontal .slide-p2 {
+                padding: 0.5rem;
+            }
+        }
