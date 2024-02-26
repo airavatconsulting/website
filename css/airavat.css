@@ -111,16 +111,24 @@
         /* NAV */
         .navbar {
             /* position: absolute; */
+            position: fixed;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
             z-index: 99;
+            background: rgba(24, 24, 24, 0.76);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            /* border: 1px solid rgba(107, 107, 107, 0.5); */
+            width: inherit;
         }
 
         .navbar .sticky-navbar {
-            position: fixed;
+            /* position: fixed; */
+            position: absolute;
             top: 0;
             width: 100%;
         }
@@ -153,6 +161,7 @@
 .scroll-horizontal {
     overflow: hidden;
     padding: 2rem;
+    padding-top: 4rem;
     /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
     background-image: url('../images/top_bg.webp');
     background-size: cover;
@@ -227,6 +236,7 @@
 @media (max-width:1024px) {
     .scroll-horizontal{
         padding: 0.5rem;
+        padding-top: 4rem;
     }
     .scroll-horizontal .slide-p2 {
     padding: 0.5rem;
