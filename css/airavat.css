@@ -22,20 +22,29 @@
 
         .body-bg {
             /* background-color: #ffead5; */
-            background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 0% 0% / 200px 200px, radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 100px 100px / 200px 200px, linear-gradient(rgba(255, 94, 0, 0.26) 2px, transparent 2px) 0px -1px / 100px 100px, linear-gradient(90deg, rgba(255, 94, 0, 0.26) 2px, rgba(255, 255, 255, 0.57) 2px) -1px 0px / 100px 100px rgba(255, 255, 255, 0.57);
+            /* background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 0% 0% / 200px 200px, radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.57) 20%, rgba(255, 255, 255, 0.57) 80%, transparent 80%, transparent) 100px 100px / 200px 200px, linear-gradient(rgba(255, 94, 0, 0.26) 2px, transparent 2px) 0px -1px / 100px 100px, linear-gradient(90deg, rgba(255, 94, 0, 0.26) 2px, rgba(255, 255, 255, 0.57) 2px) -1px 0px / 100px 100px rgba(255, 255, 255, 0.57);
             background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.5); */
+            background-color: hsla(30, 100%, 95%, 1);
+            background-image:
+                radial-gradient(at 35% 54%, hsla(169, 20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 73% 84%, hsla(0,   20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 89% 31%, hsla(24,  20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 70% 9%, hsla(331,  20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 84% 42%, hsla(281, 20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 91% 44%, hsla(179, 20%, 95%, 1) 0px, transparent 50%),
+                radial-gradient(at 34% 14%, hsla(68,  20%, 95%, 1) 0px, transparent 50%);
 
         }
 
         .card-bg {
-            backdrop-filter: blur(2px) saturate(150%);
+            backdrop-filter: blur(2px) saturate(200%);
             -webkit-backdrop-filter: blur(2px) saturate(150%);
-            background-color: rgba(165, 165, 165, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
 
-            box-shadow:
-                4px 4px 8px 0 rgba(127, 127, 127, 0.5),
-                -4px -4px 8px 0 rgba(127, 127, 127, 0.5);
+            /* box-shadow:
+                4px 4px 8px 0 rgba(127, 127, 127, 0.25),
+                -4px -4px 8px 0 rgba(127, 127, 127, 0.25); */
             margin-top: 4rem;
         }
 
@@ -104,9 +113,15 @@
 
         @media (prefers-color-scheme: dark) {
             .body-bg {
-                background: radial-gradient(circle, transparent 20%, #272626 20%, #272626 80%, transparent 80%, transparent) 0% 0% / 200px 200px, radial-gradient(circle, transparent 20%, #272626 20%, #272626 80%, transparent 80%, transparent) 100px 100px / 200px 200px, linear-gradient(rgba(255, 94, 0, 0.5) 1px, transparent 1px) 0px -0.5px / 100px 100px, linear-gradient(90deg, rgba(255, 94, 0, 0.36) 1px, #272626 1px) -0.5px 0px / 100px 100px #272626;
-                background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
-                background-color: #222;
+                background-color:hsla(15,33%,16%,1);
+                background-image:
+                radial-gradient(at 0% 0%, hsla(139,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 73% 74%, hsla(330,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 16% 20%, hsla(354,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 67% 15%, hsla(301,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 14% 79%, hsla(251,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 89% 33%, hsla(149,5%,11%,1) 0px, transparent 50%),
+                radial-gradient(at 52% 44%, hsla(38,5%,11%,1) 0px, transparent 50%);
             }
 
             .card-bg {
